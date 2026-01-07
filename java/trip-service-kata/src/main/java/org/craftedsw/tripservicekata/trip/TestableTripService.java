@@ -1,6 +1,6 @@
-package org.craftedsw.tripservicekata.user;
+package org.craftedsw.tripservicekata.trip;
 
-import org.craftedsw.tripservicekata.trip.Trip;
+import org.craftedsw.tripservicekata.user.User;
 
 import java.util.List;
 
@@ -14,7 +14,8 @@ public class TestableTripService extends TripService {
         this.loggedUser = loggedUser;
     }
 
-    static List<Trip> getByUser(User user) {
+    @Override
+    List<Trip> getByUser(User user) {
         return user.trips();
     }
 
